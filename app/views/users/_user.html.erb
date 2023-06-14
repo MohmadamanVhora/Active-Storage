@@ -1,0 +1,9 @@
+<tr>
+  <td><%= image_tag user.avatar.variant(:thumb) %></td>
+  <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td><%= user.phone_no %></td>
+  <td><%= link_to raw('<i class="fa-solid fa-eye fa-lg" style="color: #12e4f3;"></i>'), user_path(user), class: "btn p-0", title: "Show" %>
+    <%= link_to raw('<i class="fa-solid fa-pen-to-square fa-lg" style="color: #f4e32a;"></i>'), edit_user_path(user), class: "btn p-0 ms-3", title: "Edit" %>
+    <%= link_to raw('<i class="fa-solid fa-trash-can fa-lg" style="color: #f02828;"></i>'), user_path(user), class: "btn p-0 ms-3", title: "Remove", data: { turbo_method: :delete, turbo_confirm: :"Are You Sure?" } %></td>
+</tr>
