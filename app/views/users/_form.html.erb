@@ -19,7 +19,7 @@
     
     <div class="mb-4" id="file-field">
       <%= form.label :avatar, class: "form-label" %>
-      <%= form.file_field :avatar, direct_upload: true, class: "form-control" %>
+      <%= form.file_field :avatar, direct_upload: true, accept: 'image/png, image/jpeg', class: "form-control" %>
     </div>
 
     <%= form.submit submit_text, class: "btn btn-success rounded-1" %>
