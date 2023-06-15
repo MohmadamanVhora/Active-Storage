@@ -12,6 +12,11 @@
   </head>
 
   <body>
+    <% flash.each do |type, message| %>
+      <div class="container alert <%= flash.alert ? "alert-danger" : "alert-success" %> w-50 my-5">
+        <%= message %>
+      </div>
+    <% end %>
     <%= yield %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
